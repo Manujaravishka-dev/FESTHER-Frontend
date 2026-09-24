@@ -1,0 +1,4 @@
+{
+  "installCommand": "cd festher_frontend && npm install",
+  "buildCommand": "cd festher_frontend && npm run build"
+}
