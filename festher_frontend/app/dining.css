@@ -1,0 +1,166 @@
+/* ============ FESTHER DINING PAGE ============ */
+.dine-page{background:#fff;color:var(--ink,#191711);font-family:var(--font-poppins),"Poppins",sans-serif}
+
+@keyframes dine-rise{from{opacity:0;transform:translate(-50%,18px)}to{opacity:1;transform:translate(-50%,0)}}
+@keyframes dine-fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ---------- Hero ---------- */
+.dine-hero-copy{position:absolute;left:50%;bottom:54px;transform:translateX(-50%);z-index:2;width:min(92%,880px);text-align:center;color:#fff;animation:dine-rise .8s cubic-bezier(.22,1,.36,1) both}
+.dine-hero .dine-hero-title{position:static;left:auto;bottom:auto;transform:none;margin:0;white-space:normal;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:clamp(44px,5.4vw,70px);line-height:1;letter-spacing:.06em;text-transform:uppercase;color:#fff}
+.dine-hero-eyebrow{margin:0 0 14px;font-size:11px;font-weight:500;letter-spacing:.36em;text-transform:uppercase;color:var(--gold2,#d8be86)}
+.dine-hero-note{max-width:560px;margin:16px auto 0;font-size:13px;font-weight:300;line-height:1.7;color:rgba(255,255,255,.86)}
+
+/* ---------- Shared block scaffolding ---------- */
+.dine-block{width:100%;padding:clamp(64px,7vw,116px) clamp(22px,5vw,72px)}
+.dine-block--tint{background:#F7F5F0}
+.dine-block-inner{width:min(1500px,100%);margin:0 auto}
+.dine-block-head{max-width:840px;margin:0 auto;text-align:center}
+.dine-eyebrow{margin:0 0 16px;font-size:10px;font-weight:600;letter-spacing:.34em;text-transform:uppercase;color:var(--gold,#b99455)}
+.dine-title{margin:0;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:clamp(30px,3.2vw,48px);line-height:1.14;letter-spacing:.14em;text-transform:uppercase;color:var(--ink,#191711)}
+.dine-lead{margin:20px auto 0;max-width:720px;font-size:15px;line-height:1.85;color:#5c5c58}
+.dine-cta{display:inline-flex;flex-direction:column;align-items:center;margin-top:30px;font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--ink,#191711);transition:color .3s}
+.dine-cta::after{content:"";display:block;width:34px;height:1px;margin-top:9px;background:var(--gold,#b99455);transition:width .4s cubic-bezier(.22,1,.36,1)}
+.dine-cta:hover{color:var(--gold,#b99455)}
+.dine-cta:hover::after{width:64px}
+
+/* ---------- Signatures ---------- */
+.dine-sig-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,3vw,44px);margin-top:clamp(40px,4vw,64px)}
+.dine-sig{display:flex;flex-direction:column}
+.dine-sig-media{position:relative;overflow:hidden;aspect-ratio:16/10;background:#f1efe9}
+.dine-sig-media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.22,1,.36,1)}
+.dine-sig:hover .dine-sig-media img{transform:scale(1.05)}
+.dine-sig-body{display:flex;flex:1;flex-direction:column;padding:26px 4px 0}
+.dine-sig-name{margin:0;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:clamp(23px,2.1vw,30px);letter-spacing:.06em;text-transform:uppercase;color:#191711}
+.dine-sig-desc{margin:12px 0 0;max-width:560px;font-size:14px;line-height:1.7;color:#555}
+.dine-sig-foot{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:auto;padding-top:22px}
+.dine-sig-price{font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-size:22px;color:#191711;white-space:nowrap}
+.dine-sig-actions{display:flex;gap:12px}
+
+/* ---------- Menu ---------- */
+.dine-page .fg-filters button:hover{color:var(--gold,#b99455)}
+.dine-page .fg-filters button.is-active{color:var(--ink,#191711)}
+.dine-page .fg-filters button.is-active::after{background:var(--gold,#b99455)}
+.dine-menu-meta{margin:18px 0 0;text-align:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#9a9a9a}
+.dine-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.2vw,34px);margin-top:clamp(36px,4vw,56px);animation:dine-fade .55s cubic-bezier(.22,1,.36,1)}
+.dine-dish{display:flex;flex-direction:column;background:#fff;border:1px solid #ececea}
+.dine-dish-media{position:relative;overflow:hidden;aspect-ratio:4/3;background:#f1efe9}
+.dine-dish-media img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.dine-dish:hover .dine-dish-media img{transform:scale(1.04)}
+.dine-dish-badge{position:absolute;top:14px;left:14px;padding:6px 12px;background:rgba(10,9,7,.74);color:#fff;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.dine-dish-body{display:flex;flex:1;flex-direction:column;padding:24px 24px 26px}
+.dine-dish-top{display:flex;align-items:baseline;justify-content:space-between;gap:14px}
+.dine-dish-cat{font-size:9px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold,#b99455)}
+.dine-dish-price{font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-size:20px;color:#191711;white-space:nowrap}
+.dine-dish-name{margin:12px 0 0;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:clamp(20px,1.7vw,24px);letter-spacing:.03em;text-transform:uppercase;color:#191711}
+.dine-dish-desc{margin:10px 0 0;font-size:14px;line-height:1.65;color:#555}
+.dine-dish-tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0;list-style:none}
+.dine-tag{padding:4px 10px;border:1px solid #e2ddd1;font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#5c5c58}
+.dine-dish-actions{display:flex;gap:12px;margin-top:auto;padding-top:22px;border-top:1px solid #ececea}
+.dine-dish-actions .of-btn{flex:1;padding-left:12px;padding-right:12px;font-size:9px;letter-spacing:.2em}
+
+/* ---------- Dining offers ---------- */
+.dine-offer-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.2vw,34px);margin-top:clamp(36px,4vw,56px)}
+.dine-offer{display:flex;flex-direction:column;background:#fff;border:1px solid #ececea}
+.dine-offer-media{position:relative;overflow:hidden;aspect-ratio:4/3;background:#f1efe9}
+.dine-offer-media img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.dine-offer:hover .dine-offer-media img{transform:scale(1.04)}
+.dine-offer-body{display:flex;flex:1;flex-direction:column;padding:26px}
+.dine-offer-kicker{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.dine-offer-cat{font-size:9px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold,#b99455)}
+.dine-offer-badge{flex:none;padding:5px 10px;border:1px solid var(--gold,#b99455);font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#191711}
+.dine-offer-title{margin:14px 0 0;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:clamp(21px,1.9vw,26px);line-height:1.2;letter-spacing:.03em;text-transform:uppercase;color:#191711}
+.dine-offer-desc{margin:12px 0 0;font-size:14px;line-height:1.65;color:#555}
+.dine-offer-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;margin-top:18px}
+.dine-offer-now{font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-size:23px;color:#191711}
+.dine-offer-was{font-size:13px;color:#9a9a9a;text-decoration:line-through}
+.dine-offer-dates{margin:10px 0 0;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#9a9a9a}
+.dine-offer-actions{display:flex;gap:12px;margin-top:22px;padding-top:20px;border-top:1px solid #ececea}
+.dine-offer-actions .of-btn{flex:1;padding-left:12px;padding-right:12px;font-size:9px;letter-spacing:.2em}
+
+/* ---------- From our table (gallery) ---------- */
+.dine-gallery .fg-masonry{width:min(100%,1720px);margin:clamp(36px,4vw,56px) auto 0;columns:3;column-gap:clamp(10px,1.1vw,18px)}
+.dine-gallery .fg-item{margin:0 0 clamp(10px,1.1vw,18px)}
+.dine-gallery .fg-item img{transition:transform 700ms ease}
+.dine-gallery .fg-item:hover img{transform:scale(1.03)}
+
+/* ---------- Reservation ---------- */
+.dine-reserve{background:#F3F1EA}
+.dine-reserve-inner{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(34px,4vw,72px);align-items:start}
+.dine-reserve-intro{max-width:460px}
+.dine-reserve-text{margin:18px 0 0;font-size:15px;line-height:1.85;color:#5c5c58}
+.dine-reserve-list{margin:26px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+.dine-reserve-list li{display:flex;gap:12px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6d6d68}
+.dine-reserve-list li::before{content:"";flex:none;width:18px;height:1px;margin-top:9px;background:var(--gold,#b99455)}
+.dine-reserve-panel{background:#fff;padding:clamp(28px,3.4vw,48px);box-shadow:0 30px 60px rgba(12,11,8,.07)}
+
+/* ---------- Dish detail modal ---------- */
+.dine-dish-modal-media{margin:18px 0 0;overflow:hidden;aspect-ratio:16/10;background:#f1efe9}
+.dine-dish-modal-media img{width:100%;height:100%;object-fit:cover}
+.dine-dish-modal-desc{margin:16px 0 0;font-size:14px;line-height:1.75;color:#555}
+.dine-dish-modal-tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.dine-dish-modal-order{margin-top:24px;padding-top:22px;border-top:1px solid #ececea}
+.dine-dish-modal-price{font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-size:24px;color:#191711}
+.dine-dish-modal-qty{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:16px}
+.dine-dish-modal-order .of-field{margin-top:16px}
+.dine-dish-modal-actions{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.dine-dish-modal-actions .of-btn{width:100%}
+
+/* ---------- Cart ---------- */
+.dine-cart-fab{position:fixed;right:24px;bottom:24px;z-index:110;display:inline-flex;align-items:center;gap:14px;padding:15px 24px;border:0;background:#191711;color:#fff;font-family:inherit;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;box-shadow:0 18px 40px rgba(12,11,8,.28);transition:background .3s}
+.dine-cart-fab:hover{background:var(--gold,#b99455)}
+.dine-cart-fab-count{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:11px;background:var(--gold,#b99455);color:#fff;font-size:10px;letter-spacing:0}
+.dine-cart-fab:hover .dine-cart-fab-count{background:#191711}
+
+.dine-cart-overlay{position:fixed;inset:0;z-index:140;background:rgba(10,9,7,.5);opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s}
+.dine-cart-overlay--open{opacity:1;visibility:visible}
+.dine-cart{position:fixed;top:0;right:0;bottom:0;z-index:150;display:flex;flex-direction:column;width:min(440px,94vw);background:#fff;transform:translateX(102%);visibility:hidden;transition:transform .42s cubic-bezier(.4,0,.2,1),visibility .42s}
+.dine-cart--open{transform:translateX(0);visibility:visible}
+.dine-cart-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px 28px;border-bottom:1px solid #ececea}
+.dine-cart-title{margin:0;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:22px;letter-spacing:.08em;text-transform:uppercase;color:#191711}
+.dine-cart-close{display:grid;place-items:center;width:36px;height:36px;border:1px solid #e0ddd6;background:transparent;font-size:18px;line-height:1;color:#191711;cursor:pointer;transition:background .3s,color .3s}
+.dine-cart-close:hover{background:#191711;color:#fff}
+.dine-cart-lines{flex:1;overflow-y:auto;padding:8px 28px}
+.dine-cart-line{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid #f0eee9}
+.dine-cart-line-info{flex:1;min-width:0}
+.dine-cart-line-name{margin:0;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-size:18px;line-height:1.2;color:#191711}
+.dine-cart-line-unit{margin:5px 0 0;font-size:13px;color:#8a8a88}
+.dine-cart-line-note{margin:4px 0 0;font-size:12px;line-height:1.5;color:#8a8a88}
+.dine-cart-line-controls{display:flex;align-items:center;gap:16px;margin-top:12px}
+.dine-cart-line-sub{align-self:flex-start;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-size:18px;color:#191711;white-space:nowrap}
+.dine-cart-remove{border:0;background:none;padding:0;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#9a9a9a;cursor:pointer;transition:color .3s}
+.dine-cart-remove:hover{color:#9c3544}
+.dine-cart-empty{flex:1;display:grid;place-items:center;padding:40px 28px;text-align:center}
+.dine-cart-empty p{margin:0;font-size:14px;line-height:1.7;color:#8a8a88}
+.dine-cart-foot{padding:22px 28px 28px;border-top:1px solid #ececea}
+.dine-cart-foot .of-totals{margin-top:0}
+.dine-cart-foot .of-btn{width:100%;margin-top:18px}
+.dine-cart-note{margin:14px 0 0;font-size:11px;line-height:1.6;color:#8a8a88}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1200px){
+  .dine-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:1024px){
+  .dine-grid,.dine-offer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .dine-sig-grid{grid-template-columns:1fr}
+  .dine-reserve-inner{grid-template-columns:1fr}
+  .dine-reserve-intro{max-width:none}
+  .dine-gallery .fg-masonry{columns:2}
+}
+@media(max-width:700px){
+  .dine-hero-copy{bottom:40px}
+  .dine-hero .dine-hero-title{font-size:clamp(38px,12vw,52px)}
+  .dine-block{padding:56px 20px 64px}
+  .dine-grid,.dine-offer-grid{grid-template-columns:1fr;gap:28px}
+  .dine-dish-actions,.dine-offer-actions{flex-direction:column}
+  .dine-dish-actions .of-btn,.dine-offer-actions .of-btn{width:100%}
+  .dine-sig-foot{flex-direction:column;align-items:flex-start}
+  .dine-sig-actions{width:100%}
+  .dine-sig-actions .of-btn{flex:1}
+  .dine-cart-fab{left:0;right:0;bottom:0;justify-content:center;padding:16px 24px}
+  .dine-cart{width:100vw}
+  .dine-gallery .fg-masonry{columns:2}
+}
+@media(prefers-reduced-motion:reduce){
+  .dine-hero-copy,.dine-grid,.fg-item img,.dine-sig-media img,.dine-dish-media img,.dine-offer-media img{animation:none!important;transition:none!important}
+}

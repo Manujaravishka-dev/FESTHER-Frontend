@@ -1,0 +1,49 @@
+:root {
+  --fh-gold: #B89B5E;
+  --fh-gold-soft: rgba(184, 155, 94, 0.45);
+}
+
+/* Gold stays secondary to FESTHER green: small interactive accents only. */
+.book-link:hover,
+.fh-book:hover {
+  border-color: var(--fh-gold) !important;
+  color: var(--fh-gold) !important;
+}
+
+.dining-taste-explore:hover,
+.accommodation-view-all:hover,
+.gallery-filter:hover,
+.gallery-filter.active {
+  color: var(--fh-gold) !important;
+}
+
+.dining-taste-explore::after,
+.accommodation-view-all::after,
+.gallery-filter.active::after {
+  background: var(--fh-gold) !important;
+}
+
+.accommodation-arrow:hover,
+.press-carousel-arrow:hover,
+.article-progress button:hover,
+.gallery-arrow:hover {
+  color: var(--fh-gold) !important;
+}
+
+.accommodation-counter .active,
+.article-progress .active,
+.press-progress .active {
+  color: var(--fh-gold) !important;
+}
+
+.accommodation-card svg:hover,
+.accommodation-amenity svg:hover,
+.footer-socials a:hover,
+.fh-footer-socials a:hover {
+  color: var(--fh-gold) !important;
+}
+
+.accommodation-divider,
+.press-divider:hover {
+  border-color: var(--fh-gold-soft) !important;
+}

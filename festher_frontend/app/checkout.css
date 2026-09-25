@@ -1,0 +1,89 @@
+/* ============ FESTHER CHECKOUT ============ */
+/* Shared restaurant checkout — black / white / gold luxury palette. */
+
+.ck-form{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;column-gap:20px;row-gap:18px}
+
+.ck-section{margin:22px 0 0;font-size:9px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold,#b99455)}
+
+.ck-step{margin-top:22px}
+
+/* ---------- Order summary ---------- */
+.ck-summary{padding:6px 22px;border:1px solid #ececea;background:#fff}
+.ck-summary .ck-section{margin-top:18px}
+.ck-row{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:15px 0;border-bottom:1px solid #f0ece3}
+.ck-row:last-of-type{border-bottom:0}
+.ck-row-main{min-width:0}
+.ck-row-name{display:block;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-size:19px;color:#191711}
+.ck-row-note{display:block;margin-top:4px;font-size:12px;font-style:italic;color:#8a8a84}
+.ck-row-qty{display:inline-flex;align-items:center;gap:14px;margin-top:10px;font-size:12px;letter-spacing:.12em;color:#555}
+.ck-row-qty button{width:26px;height:26px;border:1px solid #ddd8cd;background:transparent;color:#191711;font-size:15px;line-height:1;cursor:pointer;transition:border-color .3s,color .3s}
+.ck-row-qty button:hover{border-color:var(--gold,#b99455);color:var(--gold,#b99455)}
+.ck-row-qty b{min-width:20px;text-align:center;font-weight:600}
+.ck-row-price{flex:none;text-align:right;min-width:120px}
+.ck-row-unit{display:block;font-size:11px;letter-spacing:.06em;color:#8a8a84;white-space:nowrap}
+.ck-row-price strong{display:block;margin-top:4px;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-size:18px;font-weight:400;color:#191711;white-space:nowrap}
+.ck-totals{margin-top:6px;padding:16px 0 20px;border-top:1px dashed #e6e2da;display:flex;flex-direction:column;gap:8px}
+.ck-totals-row{display:flex;justify-content:space-between;gap:14px;font-size:14px;color:#555}
+.ck-totals-row--discount{color:var(--gold,#b99455)}
+.ck-totals-row--total{margin-top:4px;padding-top:12px;border-top:1px solid #ececea;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-size:21px;color:#191711}
+
+/* ---------- Form actions ---------- */
+.ck-form-actions{margin-top:24px;display:flex;justify-content:flex-end}
+.ck-form-actions--split{justify-content:space-between;gap:12px}
+.ck-form-actions .ck-btn{min-width:200px}
+
+/* ---------- Buttons ---------- */
+.ck-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border:1px solid #191711;background:#191711;color:#fff;font-family:inherit;font-size:10px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:background .3s,border-color .3s,color .3s}
+.ck-btn:hover{background:var(--gold,#b99455);border-color:var(--gold,#b99455)}
+.ck-btn:disabled{opacity:.55;cursor:not-allowed}
+.ck-btn--ghost{background:transparent;color:#191711;border-color:#d8d4cc}
+.ck-btn--ghost:hover{background:transparent;border-color:var(--gold,#b99455);color:#191711}
+.ck-btn--wa{background:transparent;color:#191711;border-color:#191711}
+.ck-btn--wa:hover{background:#191711;color:#fff}
+
+/* ---------- Order method ---------- */
+.ck-methods{display:flex;flex-direction:column;gap:0;margin-top:20px}
+.ck-methods--choice{gap:14px}
+.ck-method{display:flex;align-items:center;gap:18px;width:100%;padding:20px 22px;border:1px solid #e3e0d8;background:#fff;color:#191711;font-family:inherit;text-align:left;cursor:pointer;transition:border-color .3s,background .3s,box-shadow .3s}
+.ck-method:hover{border-color:var(--gold,#b99455);background:#fbfaf6;box-shadow:0 0 0 3px rgba(184,155,94,.1)}
+.ck-method:disabled{opacity:.55;cursor:not-allowed}
+.ck-method--pay{margin-top:0;border-color:#d0cabe;background:#faf9f5}
+.ck-method-icon{flex:none;width:46px;height:46px;display:grid;place-items:center;border:1px solid #191711;color:#191711;transition:background .3s,color .3s}
+.ck-method:hover .ck-method-icon{background:#191711;color:var(--gold,#b99455)}
+.ck-method-copy{min-width:0;display:flex;flex-direction:column;gap:4px}
+.ck-method-copy strong{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:#191711}
+.ck-method-copy em{font-size:13px;font-style:normal;line-height:1.5;color:#8a8a84}
+.ck-method-go{margin-left:auto;flex:none;font-size:20px;color:var(--gold,#b99455)}
+.ck-or{display:flex;align-items:center;gap:16px;margin:14px 0;font-size:9px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#8a8a84}
+.ck-or::before,.ck-or::after{content:"";flex:1;height:1px;background:#e9e6de}
+.ck-methods-note{margin:16px 2px 0;font-size:12px;line-height:1.65;color:#8a8a84}
+
+/* ---------- Processing ---------- */
+.ck-processing{display:flex;align-items:center;gap:14px;padding:26px 4px}
+.ck-processing-text{margin:0;font-size:12px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:#191711}
+.ck-spinner{flex:none;width:18px;height:18px;border:1px solid #d5cfc0;border-top-color:#191711;border-radius:50%;animation:of-spin .8s linear infinite}
+
+/* ---------- Result panels ---------- */
+.ck-result{padding:26px 6px 8px;text-align:center}
+.ck-check{width:52px;height:52px;margin:0 auto 18px;border:1px solid var(--gold,#b99455);border-radius:50%;display:grid;place-items:center;color:#191711;font-size:22px}
+.ck-fail{width:52px;height:52px;margin:0 auto 18px;border:1px solid #9c3544;border-radius:50%;display:grid;place-items:center;color:#9c3544;font-size:22px}
+.ck-result-title{margin:0 0 12px;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:25px;letter-spacing:.03em;text-transform:uppercase;color:#191711}
+.ck-result p{margin:0 auto;max-width:460px;font-size:14px;line-height:1.7;color:#555}
+.ck-result p+p{margin-top:12px}
+.ck-warn{color:#9c3544 !important}
+.ck-ref{display:inline-block;margin:18px auto 0;padding:10px 18px;border:1px solid #e3ded2;background:#faf9f6;font-size:12px;font-weight:600;letter-spacing:.2em;color:#191711}
+.ck-hint{margin-top:14px !important;font-size:12px !important;color:#8a8a84 !important}
+.ck-actions{margin-top:26px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+
+/* ---------- Responsive ---------- */
+@media(max-width:700px){
+  .ck-form{grid-template-columns:1fr}
+  .ck-summary{padding:6px 16px}
+  .ck-row{flex-direction:column;gap:10px}
+  .ck-row-price{min-width:0;text-align:left}
+  .ck-method{gap:14px;padding:17px 16px}
+  .ck-method-icon{width:42px;height:42px}
+  .ck-form-actions{justify-content:stretch}
+  .ck-form-actions .ck-btn{min-width:0;flex:1}
+  .ck-actions .ck-btn{width:100%}
+}
