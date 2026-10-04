@@ -1,0 +1,85 @@
+/* Shared native horizontal-scroll behavior (touchpad / mouse / touch).
+   Applied to every horizontally scrollable section site-wide.
+   - Touchpad two-finger swipe works natively (no click/drag required).
+   - Vertical wheel still scrolls the page (no wheel hijacking).
+   - Mobile one-finger swipe works natively.
+   - Mouse drag-to-scroll is added by the hook (mouse pointers only). */
+
+.horizontal-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x pan-y;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-scroll--snap {
+  scroll-snap-type: x proximity;
+}
+
+.horizontal-scroll--snap > * {
+  scroll-snap-align: start;
+}
+
+/* Mouse drag state (visual only — never blocks native scrolling). */
+.horizontal-scroll.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+}
+
+/* ---- Project-specific viewport overrides ----
+   The legacy styles used overflow:hidden + JS-driven transforms, which
+   blocked native touchpad gestures. These overrides restore native
+   scrolling while keeping every visual rule (sizes, gaps, padding). */
+.acc-viewport.horizontal-scroll {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 3vw, 44px);
+  overflow-x: auto;
+  overflow-y: hidden;
+  touch-action: pan-x pan-y;
+  cursor: grab;
+}
+@media (max-width: 700px) {
+  .acc-viewport.horizontal-scroll {
+    gap: 20px;
+  }
+}
+
+.gr-viewport.horizontal-scroll,
+.press-carousel-viewport.horizontal-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  touch-action: pan-x pan-y;
+}
+
+.gr-track--native,
+.press-carousel-track--native {
+  display: flex;
+  will-change: scroll-position;
+}
+
+.gr-track--native > *,
+.press-carousel-track--native > * {
+  scroll-snap-align: start;
+}
+
+/* Filter rows were already native — just guarantee touchpad/touch panning. */
+.fg-filters {
+  touch-action: pan-x pan-y;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .horizontal-scroll {
+    scroll-behavior: auto;
+  }
+}

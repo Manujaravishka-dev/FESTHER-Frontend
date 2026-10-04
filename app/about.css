@@ -1,0 +1,66 @@
+/* ============ FESTHER ABOUT PAGE ============ */
+.about-page{background:#fff;color:var(--ink,#191711);font-family:var(--font-poppins),"Poppins",sans-serif}
+
+/* ---- About page navbar: the Navbar component owns the hero/solid scroll state ---- */
+
+/* ---- Our Story ---- */
+.ab-story{position:relative;background:#fff;overflow:hidden;padding:clamp(24px,3vw,44px) 0 clamp(84px,8vw,124px)}
+.ab-story-canvas{position:relative;width:min(94%,1680px);margin:0 auto}
+.ab-story-media{position:relative;height:clamp(440px,40vw,540px);overflow:hidden}
+.ab-story-zoom{width:100%;height:100%;transform:scale(1.12)}
+.ab-story-media img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+.ab-story-row{display:grid;grid-template-columns:minmax(0,52%) minmax(0,1fr);gap:0 clamp(28px,3vw,56px);align-items:start}
+.ab-story-grid{position:relative;z-index:2;width:100%;box-sizing:border-box;background:#fff;padding:clamp(30px,3.2vw,52px) clamp(30px,3.4vw,56px);box-shadow:0 26px 64px rgba(12,11,8,.12);display:grid;grid-template-columns:minmax(0,44%) minmax(0,1fr);gap:clamp(20px,2.6vw,40px);align-items:start;margin-top:clamp(-130px,-9vw,-90px)}
+.ab-story-kicker{padding:2px 0 0}
+.ab-story-kicker p{margin:0 0 16px;font-size:10px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold,#b99455)}
+.ab-story-heading{margin:0;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:clamp(26px,2.6vw,42px);letter-spacing:.14em;text-transform:uppercase;color:#3f3f3f;line-height:1.14}
+.ab-story-cols{display:grid;grid-template-columns:1fr;gap:clamp(18px,2vw,26px)}
+.ab-story-cols p{margin:0;font-size:14.5px;line-height:1.85;color:#555}
+.ab-story-link{display:inline-flex;align-items:center;gap:12px;margin-top:30px;padding-bottom:8px;border-bottom:1px solid var(--fh-green,#486A60);font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--fh-green,#486A60);transition:color .3s,border-color .3s}
+.ab-story-link span{font-size:13px;line-height:1}
+.ab-story-link:hover{color:var(--fh-gold,#B89B5E);border-color:var(--fh-gold,#B89B5E)}
+
+/* ---- The FESTHER Experience (right of the Our Story panel) ---- */
+.ab-story-aside{width:100%;max-width:580px;padding:clamp(6px,1.4vw,18px) 0 0}
+.ab-story-aside .gold-label{margin-bottom:18px}
+.ab-story-aside-heading{margin:0;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:clamp(28px,3vw,46px);line-height:1.12;letter-spacing:.08em;text-transform:uppercase;color:#3f3f3f}
+.ab-story-aside-heading em{font-style:italic;color:var(--gold,#b99455)}
+.ab-story-aside-desc{margin:22px 0 0;font-family:var(--font-poppins),"Poppins",sans-serif;font-size:15px;line-height:1.85;color:#555;max-width:520px}
+.ab-story-aside-sub{margin:16px 0 0;font-family:var(--font-poppins),"Poppins",sans-serif;font-size:14px;line-height:1.75;color:#666}
+.ab-story-aside-link{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding-bottom:7px;border-bottom:1px solid var(--fh-green,#486A60);font-family:var(--font-poppins),"Poppins",sans-serif;font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--fh-green,#486A60);transition:color .3s,border-color .3s}
+.ab-story-aside-link span{font-size:13px;line-height:1}
+.ab-story-aside-link:hover{color:var(--fh-gold,#B89B5E);border-color:var(--fh-gold,#B89B5E)}
+
+/* ---- What We Value ---- */
+.ab-values{padding:clamp(72px,8vw,120px) clamp(20px,6vw,90px) clamp(56px,6vw,88px);background:#fff}
+.ab-values-head{text-align:center}
+.ab-values-head p{margin:0 0 15px;font-size:10px;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--gold,#b99455)}
+.ab-values-head h2{margin:0;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:clamp(34px,3.8vw,52px);letter-spacing:.14em;text-transform:uppercase;color:#3f3f3f}
+.ab-values-list{width:min(100%,1240px);margin:clamp(48px,6vw,80px) auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(36px,4vw,60px)}
+.ab-value{border-top:1px solid #E3DECF;padding-top:30px}
+.ab-value-num{margin:0 0 16px;font-size:11px;font-weight:500;letter-spacing:.28em;color:var(--gold,#b99455)}
+.ab-value h3{margin:0 0 12px;font-family:var(--font-serif),"Cormorant Garamond",Georgia,serif;font-weight:400;font-size:clamp(22px,2vw,28px);letter-spacing:.04em;color:#3f3f3f}
+.ab-value p{margin:0;max-width:320px;font-size:14px;line-height:1.8;color:#666}
+
+@media(max-width:1024px){
+  .ab-story-media{height:clamp(340px,42vw,440px)}
+  .ab-story-row{grid-template-columns:minmax(0,56%) minmax(0,1fr);gap:0 clamp(20px,3vw,34px)}
+  .ab-story-grid{margin-top:clamp(-80px,-7vw,-60px);grid-template-columns:1fr;gap:clamp(22px,3vw,32px)}
+  .ab-story-cols{grid-template-columns:1fr;gap:20px}
+  .ab-story-aside{padding-top:4px}
+  .ab-values-list{grid-template-columns:1fr;gap:44px}
+}
+@media(max-width:700px){
+  .ab-story{padding-top:20px;padding-bottom:64px}
+  .ab-story-canvas{width:94%}
+  .ab-story-media{height:clamp(240px,58vw,320px)}
+  .ab-story-row{grid-template-columns:1fr;gap:0}
+  .ab-story-grid{position:static;width:100%;margin-top:20px;background:transparent;box-shadow:none;padding:0;grid-template-columns:1fr;gap:clamp(24px,5vw,32px)}
+  .ab-story-kicker{padding:0}
+  .ab-story-heading{font-size:clamp(24px,7vw,30px)}
+  .ab-story-cols{grid-template-columns:1fr;gap:18px}
+  .ab-story-link{margin-top:26px}
+  .ab-story-aside{padding:clamp(28px,5vw,36px) 0 0;max-width:none}
+  .ab-story-aside-heading{font-size:clamp(26px,8vw,34px)}
+  .ab-values-head h2{font-size:clamp(30px,9vw,40px)}
+}

@@ -1,0 +1,139 @@
+.contact-page.location-page {
+  padding-top: 0;
+  background: #fff;
+  color: #000;
+}
+
+/* The hero carries the shared navbar: it is the first element on the page, so
+   the navbar overlays the photograph exactly like the Home page hero. */
+.location-hero {
+  position: relative;
+  isolation: isolate;
+  height: clamp(450px, 38vw, 550px);
+  overflow: hidden;
+  background: #000;
+}
+
+/* The hero is an isolated stacking context; lift it only while the shared
+   navbar is pinned so the fixed navbar is not painted behind later sections. */
+.location-hero:has(> .fh-nav--pinned) { z-index: 60; }
+
+.location-hero-image {
+  object-fit: cover;
+  object-position: center 52%;
+}
+
+.location-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(0 0 0 / 8%) 30%, rgb(0 0 0 / 48%) 100%);
+}
+
+.location-hero h1 {
+  position: absolute;
+  inset-inline: 20px;
+  bottom: 44px;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-family: var(--fh-serif);
+  font-size: clamp(42px, 4.5vw, 66px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: .12em;
+  text-indent: .12em;
+  text-transform: uppercase;
+}
+
+.location-intro {
+  padding: 38px 24px 76px;
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+
+.location-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+.location-breadcrumb a { padding-block: 12px; }
+.location-breadcrumb a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.location-breadcrumb a:focus-visible { outline: 1px solid #000; outline-offset: 5px; }
+
+.location-intro h2 {
+  margin: 42px 0 22px;
+  font-family: var(--fh-serif);
+  font-size: clamp(34px, 3.5vw, 48px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: .01em;
+  text-wrap: balance;
+}
+
+.location-description {
+  max-width: 820px;
+  margin-inline: auto;
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.9;
+}
+
+.location-description p { margin: 0; }
+.location-description p + p { margin-top: 16px; }
+.location-page .fh-contact-section { border-top: 1px solid #000; }
+.location-page .fh-contact-lead { color: #000; }
+
+/* ============ FULL-WIDTH MAP (CONTACT → FOOTER) ============ */
+.fh-map {
+  background: #fff;
+  padding: 0 0 clamp(40px, 4.5vw, 64px);
+}
+
+.fh-map-frame {
+  position: relative;
+  width: 100%;
+  height: clamp(400px, 46vh, 500px);
+  background: #f4f2ed;
+}
+
+.fh-map-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .fh-map-frame { height: clamp(350px, 45vh, 400px); }
+}
+
+@media (max-width: 700px) {
+  .fh-map-frame { height: clamp(280px, 40vh, 350px); }
+}
+
+@media (max-width: 1024px) {
+  .location-hero { height: 420px; }
+}
+
+@media (max-width: 700px) {
+  .location-hero { height: clamp(280px, 70vw, 360px); }
+  .location-hero h1 { bottom: 30px; }
+  .location-intro { padding: 28px 22px 48px; }
+  .location-intro h2 { margin-top: 30px; }
+  .location-description { font-size: 13px; line-height: 1.85; }
+}
